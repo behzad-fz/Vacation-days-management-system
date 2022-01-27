@@ -45,8 +45,8 @@ trait ContentFormatter
             $result .= str_repeat(" ",22 - mb_strlen($item['name']));
             $result .= '|';
             $result .= str_repeat(" ", 10);
-            $result .= $item['vacation_days'].' days';
-            $result .= str_repeat(" ", 22);
+            $result .= round($item['vacation_days'],1).' days';
+            $result .= str_repeat(" ", 24 - strlen((string) round($item['vacation_days'],1)));
             $result .= '|';
             $result .= "\n";
             $result .= "|";
