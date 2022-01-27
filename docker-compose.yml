@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: php_challenge
+    build:
+      context: ./.docker/php/8.1
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+    command: /var/local/entrypoint.sh
+    restart: "no"
+
