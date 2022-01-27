@@ -44,35 +44,57 @@
 - Docker Compose
 - Make
 
+### Help
+You can either use provided (make) commands or use original commands.
+
+Run command below to see list of available make commands
+```
+~$ make
+
+/--- Ottonova -------------------------------------------------------/
+build		Build the container
+up	        Create and start containers
+destroy		Stop and remove containers
+status 		Shows the status of the containers
+shell		Starting a shell in php container
+test     	Run all the application tests
+/-----------------------------------------------------------------/
+```
 ### Installation
 ```
-make build
+~$ make build
+ OR
+~$ docker-compose up --build -d
 ```
 
 ### Shell Access
 To access the php container as a root user:
 ```
-make shell
+~$ make shell
+ OR
+~$ docker-compose exec app bash
 ```
 ### Usage
 You get vacation days report following command:
 Notice : Commands should be executed inside php container
 ```
-make shell
-php index.php 2xxx (get report on terminal)
-    Ex : php index.php 2020
-php index.php 2xxx --format-json=path/to/file.json (get report in json file)
-    Ex : php index.php 2020 --format-json=reports/vacations.json
-php index.php 2xxx --format-json=txt/to/file.txt (get report in text file)
-    Ex : php index.php 2020 --format-txt=reports/vacations.txt
+~$ make shell
+~$ php index.php 2xxx (get report on terminal)
+    Ex : ~$ php index.php 2020
+~$ php index.php 2xxx --format-json=path/to/file.json (get report in json file)
+    Ex : ~$ php index.php 2020 --format-json=reports/vacations.json
+~$ php index.php 2xxx --format-json=txt/to/file.txt (get report in text file)
+    Ex : ~$ php index.php 2020 --format-txt=reports/vacations.txt
 ```
 
 ### Run Tests
 You can run tests by entering the following command:
 Notice : Commands should be executed inside php container
 ```
-make shell
-make test (./vendor/bin/phpunit also works)
+~$ make shell
+~$ make test 
+ OR
+~$ ./vendor/bin/phpunit
 ```
 
 
