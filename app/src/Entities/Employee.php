@@ -97,7 +97,7 @@ class Employee implements EmployeeInterface
      */
     public function isOver30YearsOld(Carbon $desiredYear = null): bool
     {
-        return $this->getAge($desiredYear) >= 30;
+        return $this->getAge($desiredYear->endOfYear()) >= 30;
     }
 
     /**
