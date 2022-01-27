@@ -1,7 +1,12 @@
 <?php
 
 return [
-    // The options are json , sqlite
+    /*
+     |--------------------------------------------------------------------------
+     | Data source for application
+     |--------------------------------------------------------------------------
+     | Supported data sources: "json", "sqlite"
+     */
     'data_source' => 'json',
 
     'json' => [

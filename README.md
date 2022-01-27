@@ -84,7 +84,7 @@ These are the things it wasn't clear, so I had to assume
     Ex: input year = 2020
         How many vacation days employee has untill 2020.12.31
         How many years is employee working by 2020.12.31
-        Is employee going to be >= 30 years old by 2020
+        Is employee going to be >= 30 years old by 2020.12.31
         ... 
  
 2 - I didn't round down vacation days float number becasue in my current company we have such thing and they convert the floating

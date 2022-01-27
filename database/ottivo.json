@@ -37,11 +37,18 @@
             "special_contract_vacation_days" : null
         },
         {
-            "name" : "New Guy",
+            "name" : "Friedrich Nietzsche",
             "date_of_birth" : "23.05.1980",
             "contract_start_date" : "01.12.2015",
             "special_contract" : "Golden contract",
-            "special_contract_vacation_days" : 50
+            "special_contract_vacation_days" : 35
+        },
+        {
+            "name" : "Bill Gates",
+            "date_of_birth" : "23.05.1990",
+            "contract_start_date" : "01.12.2015",
+            "special_contract" : " contract",
+            "special_contract_vacation_days" : 12
         }
     ]
 }
