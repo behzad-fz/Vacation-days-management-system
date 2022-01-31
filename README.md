@@ -1,4 +1,4 @@
-# Ottonova
+# Vacation-days-management-system
 
 - [Services](#services) What Dev offers
 - [Extra Apps](#extra-apps) What will be shipped with this image
@@ -9,7 +9,6 @@
 - [Shell Access](#shell-access) How to access inside containers
 - [Usage](#usage) instructions to use application
 - [Run Tests](#run-tests) How to run tests (PHPUnit)
-- [Assumptions](#Assumptions) Assumptions
 - [Code Examples](#code-examples) Code examples
 
 ### Services
@@ -51,7 +50,7 @@ Run command below to see list of available make commands
 ```
 ~$ make
 
-/--- Ottonova -------------------------------------------------------/
+/---Vacation-days-management-system------------------------------/
 build		Build the container
 up	        Create and start containers
 destroy		Stop and remove containers
@@ -95,42 +94,6 @@ Notice : Commands should be executed inside php container
 ~$ make test 
  OR
 ~$ ./vendor/bin/phpunit
-```
-
-
-### Assumptions
-These are the things it wasn't clear, so I had to assume
-```
-1 - The requirements states the command only gets the year as input and knowing the months are crucial to be able to calculate, 
-    so in every calculation i assume you mean by the end of that year.
-    Ex: input year = 2020
-        How many vacation days employee has untill 2020.12.31
-        How many years is employee working by 2020.12.31
-        Is employee going to be >= 30 years old by 2020.12.31
-        ... 
- 
-2 - I didn't round down vacation days float number becasue in my current company we have such thing and they convert the floating
-    point to hours of vacation.
-    Ex: vacation days = 20,33
-        means employee has 20 days and 3 hours or something
-
-
-3- I assume by 5 years you mean 5 full years so i won't take the year to calculation in the employment 
-    years even if it is just one day short!
-    Ex: if an employee is working for 1 year and 3 month, the years of employment will be 1
-
-4 -  i assume if the employee is borned in 31.12.2020 s/he is not considered 1 year old in 31.12.2021.
-    I consider them 1 year old in 01.01.2022
-
-5 - About the data validation, there are a lot of thing i could have done for validation but i keep it simple
-    due to lack of time.
-
-6 - The document required to avoid using a database and i used json file as data source. But I also added 
-    sqlite to show it's easily expandable. ps, the functionality in sqlite class is missing a lot of options
-    like query, delete, update , etc. I just avoided them due to lack of time
- 
-7 - in Consloe i don't generate the table columns dynamically because i didn't want to spend much time 
-    in arranging the appearance on console rather than spending the time on application logic and arcitecture
 ```
 
 ### Code Examples
